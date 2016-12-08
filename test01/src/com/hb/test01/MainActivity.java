@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity {
 
 	Button btn1;
+	Button btn2;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,16 @@ public class MainActivity extends Activity {
 				Toast.makeText(getApplicationContext()
 						, "btn1 click", Toast.LENGTH_SHORT).show();
 			}});
+        
+        
+        btn2=(Button)findViewById(R.id.button2);
+        btn2.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				btn2.setText(R.string.btn2msg);
+			}
+		});
     }
 
 }

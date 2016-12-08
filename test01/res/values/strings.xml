@@ -4,6 +4,7 @@
     <string name="app_name">test01</string>
     <string name="hello_world">Hello world!</string>
     <string name="testString">android msg!</string>
+    <string name="btn2msg">click ok!</string>
     <string name="action_settings">Settings</string>
 
 </resources>
