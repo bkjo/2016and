@@ -16,17 +16,41 @@
     <script src="js/jquery.mobile-1.4.5.js"></script>
 </head>
 <body>
-  <div data-role="page">
+  <div id="main" data-role="page">
       <div data-role="header">
           <h1>Header</h1>
       </div>
       <div data-role="content">
           <a href="ex01.html" data-role="button">ex01</a>
+          <a href="#p2" data-role="button">go page2</a>
       </div>
       <div data-role="footer" data-position="fixed">
           <h1>footer</h1>
       </div>
-  </div>      
+  </div>  
+  <div id="p2" data-role="page">
+      <div data-role="header">
+          <h1>page2</h1>
+      </div>
+      <div data-role="content">
+          <a href="#" data-role="button" data-rel="back">back</a>
+          <a href="#p3" data-role="button">go page3</a>
+      </div>
+      <div data-role="footer" data-position="fixed">
+          <h1>footer</h1>
+      </div>
+  </div>   
+  <div id="p3" data-role="page">
+      <div data-role="header">
+          <h1>page3</h1>
+      </div>
+      <div data-role="content">
+          <a href="#" data-role="button" data-rel="back">back</a>
+      </div>
+      <div data-role="footer" data-position="fixed">
+          <h1>footer</h1>
+      </div>
+  </div>         
         
 </body>
 </html>
