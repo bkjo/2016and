@@ -12,8 +12,27 @@
     <script type="text/javascript">
         app.initialize();
     </script>
-    <script src="js/jquery-1.11.3.js"></script>  
+    <script src="js/jquery-1.11.3.js"></script> 
+    <script>
+    $( document ).on( "mobileinit", function() {
+            $.mobile.defaultPageTransition='slide';
+    }); 
+    </script> 
     <script src="js/jquery.mobile-1.4.5.js"></script>
+    <script>
+      
+    $(document).ready(function(){
+        $(".lnk").click(function(){
+            var url=$(this).attr("href");
+            $.mobile.changePage(url,{
+                transition:"slide",
+                reverse:true
+            });
+        });
+
+    });
+    
+    </script>
 </head>
 <body>
   <div id="main" data-role="page">
@@ -35,17 +54,18 @@
       <div data-role="content">
           <a href="#" data-role="button" data-rel="back">back</a>
           <a href="#p3" data-role="button">go page3</a>
-          <a href="btn01.html" data-role="button">btn01</a>
-          <a href="btn02.html" data-role="button">btn02</a>
-          <a href="btn03.html" data-role="button">btn03</a>
-          <a href="list01.html" data-role="button">list01</a>
-          <a href="list02.html" data-role="button">list02</a>
+          <a href="btn01.html" data-role="button" data-transition="fade">btn01</a>
+          <a href="btn02.html" data-role="button" data-transition="slide" data-direction="reverse">btn02</a>
+          <a href="btn03.html" data-role="button" data-transition="slidedown" data-direction="reverse">btn03</a>
+          <a href="list01.html" data-role="button" data-transition="pop">list01</a>
+          <a href="list02.html" data-role="button" data-transition="flip">list02</a>
           <a href="list03.html" data-role="button">list03</a>
           <a href="list04.html" data-role="button">list04</a>
           <a href="grid.html" data-role="button">grid</a>
           <a href="colla.html" data-role="button">collapsible</a>
           <a href="form.html" data-role="button">form</a>
           <a href="link.html" data-role="button">link</a>
+          <a href="link2.html" class="lnk" data-role="button">link2</a>
       </div>
       <div data-role="footer" data-position="fixed">
           <h1>footer</h1>
