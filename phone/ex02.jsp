@@ -15,25 +15,59 @@
         //$.mobile.loadingMessage="hello";
         console.log("mobileinit");
         
-        $(document).on( "pagebeforeload",function(e){
+        $(document).on( "pagebeforeload",function(e,data){
             console.log("pagebeforeload");
+            console.log(data.url);
+            console.log("-----------------");
         });
-        $(document).on( "pageload",function(e){
+        $(document).on( "pageload",function(e,data){
             console.log("pageload");
+            console.log(data.url);
+            console.log("-----------------");
         });
         
-        $(document).on( "pagebeforecreate",function(e){
+        $(document).on( "pagebeforecreate","#ex03",function(e){
             console.log("pagebeforecreate");
         });
-        $(document).on( "pagecreate",function(e){
+        $(document).on( "pagecreate","#ex03",function(e){
             console.log("pagecreate");
         });
-        $(document).on( "pageinit",function(e){
+        $(document).on( "pageinit","#ex03",function(e){
             console.log("pageinit");
         });
         
-        $(document).on( "pageremove",function(e){
+        $(document).on( "pageremove","#ex03",function(e){
             console.log("pageremove");
+        });
+        
+        $(document).on( "pagebeforeshow","#ex02",function(e,ui){
+            console.log("ex02 pagebeforeshow");
+        });
+        $(document).on( "pageshow","#ex02",function(e,ui){
+            console.log("ex02 pageshow");
+        });
+        $(document).on( "pagebeforehide","#ex02",function(e,ui){
+            console.log("ex02 pagebeforehide");
+        });
+        $(document).on( "pagehide","#ex02",function(e,ui){
+            console.log("ex02 pagehide");
+            console.log(ui.nextPage);
+            console.log("--------------");
+        });
+        
+        $(document).on( "pagebeforeshow","#ex03",function(e,ui){
+            console.log("ex03 pagebeforeshow");
+        });
+        $(document).on( "pageshow","#ex03",function(e,ui){
+            console.log("ex03 pageshow");
+            console.log(ui.prevPage);
+            console.log("--------------");
+        });
+        $(document).on( "pagebeforehide","#ex03",function(e,ui){
+            console.log("ex03 pagebeforehide");
+        });
+        $(document).on( "pagehide","#ex03",function(e,ui){
+            console.log("ex03 pagehide");
         });
         
     });
@@ -44,7 +78,7 @@
 
 </head>
 <body>
-    <div data-role="page">
+    <div id="ex02" data-role="page">
     <div data-role="header">
         <h1>jsp를 이용한 제이퀘리모바일</h1>
     </div>
